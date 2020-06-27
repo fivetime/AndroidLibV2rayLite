@@ -4,8 +4,7 @@ V2Ray 在实现上使用 go 语言，同时客户端和服务端共用同一套�
 
 ## 1. 未解决问题
 ### 1.1. gomobile 不支持 Go module 编译
-如果在使用 gomobile 编译时，使用 Go module(也就是 GO111MODULE=on ) 会报错，找不到 package, 参考 https://github.com/golang/go/wiki/Mobile
-gomobile-not-support-go-module
+如果在使用 gomobile 编译时，使用 Go module(也就是 GO111MODULE=on ) 会报错，找不到 package, 参考 https://github.com/golang/go/wiki/Mobile  
 ![](https://github.com/fivetime/AndroidLibV2rayLite/raw/master/screenshot/gomobile.jpg)
 
 ## 2. 提前准备
