@@ -54,6 +54,7 @@ sh build-on-mac.sh android [data] [dep]
 ```
 # clone 仓库到本地
 git clone https://github.com/fivetime/AndroidLibV2rayLite.git
+cd AndroidLibV2rayLite/
 
 # 执行脚本
 /bin/bash build/build-on-linux.sh sdk data dep
