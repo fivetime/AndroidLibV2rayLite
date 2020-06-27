@@ -26,7 +26,7 @@ go 我使用的版本: go version go1.13.1 darwin/amd64
 ### 3.1.3. clone 仓库
 ```
 # clone 仓库到本地
-git clone https://github.com/yuanmomo/AndroidLibV2rayLite.git
+git clone https://github.com/fivetime/AndroidLibV2rayLite.git
 ```
 
 #### 3.1.4. 执行命令
@@ -53,7 +53,7 @@ sh build-on-mac.sh android [data] [dep]
 #### 3.2.1. clone 仓库
 ```
 # clone 仓库到本地
-git clone https://github.com/yuanmomo/AndroidLibV2rayLite.git
+git clone https://github.com/fivetime/AndroidLibV2rayLite.git
 
 # 执行脚本
 /bin/bash build/build-on-linux.sh sdk data dep
@@ -66,7 +66,7 @@ git clone https://github.com/yuanmomo/AndroidLibV2rayLite.git
 1. 安装 Docker
 1. 安装 Go
 1. 安装 Android SDK + NDK + Tools + OpenJDK8
-1. Docker 拉取 yuanmomo/android-v2ray-build:1.0.0 镜像后开始编译
+1. Docker 拉取 fivetime/android-v2ray-build:1.0.0 镜像后开始编译
 
 ### 3.3. 注意事项
 1. 注意需要梯子
