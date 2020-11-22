@@ -36,8 +36,8 @@ export ALL_PROXY=socks5://127.0.0.1:1086
 export all_proxy=socks5://127.0.0.1:1086
 
 ###### 配置 android 的 sdk 和 ndk
-export ANDROID_HOME="/Users/MoMo/Library/Android/sdk"
-export ANDROID_NDK_HOME="/Users/MoMo/Library/Android/sdk/ndk/20.0.5594570"
+export ANDROID_HOME="/root/Library/Android/sdk"
+export ANDROID_NDK_HOME="/root/Library/Android/sdk/ndk/20.0.5594570"
 
 ###### 根据环境选择执行脚本:
 # Mac OS
