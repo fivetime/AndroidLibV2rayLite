@@ -49,7 +49,7 @@ root_dir=${current_dir}/..
 # --- set ENV
 DOWNLOAD_URL="https://dl.google.com/android/repository"
 SDK_FILE_NAME="sdk-tools-linux-4333796.zip"
-GO_FILE_NAME="go1.13.5.linux-amd64.tar.gz"
+GO_FILE_NAME="go1.15.4.linux-amd64.tar.gz"
 
 ANDROID_HOME="/usr/local/android-sdk"
 ANDROID_NDK_HOME="${ANDROID_HOME}/ndk-bundle"
@@ -84,8 +84,11 @@ if [[ ! $(command -v sdkmanager) ]]; then
     wget -q ${DOWNLOAD_URL}/${SDK_FILE_NAME} && unzip ${SDK_FILE_NAME} -d ${ANDROID_HOME} && rm -rf ${SDK_FILE_NAME}*
 
     # update PATH
-    echo 'export PATH=${PATH}'":${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools" >> ~/.bashrc
-    source ~/.bashrc
+    check_export=`cat ~/.bashrc`
+    if [[ $check_export != *$ANDROID_HOME* ]]; then
+        echo 'export PATH=${PATH}'":${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools" >> ~/.bashrc
+        source ~/.bashrc
+    fi
 fi
 
 # ------------------------------------------------------
