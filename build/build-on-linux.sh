@@ -76,7 +76,7 @@ if [[ ! $(command -v go) ]]; then
     check_export=`cat ~/.golang`
     if [[ $check_export != *'/usr/local/go/bin'* ]]; then
         echo 'export PATH=${PATH}'":/usr/local/go/bin:/root/go/bin" >> ~/.golang
-        echo 'source ~/.golang'; source ~/.bashrc; /bin/bash ~/.golang
+        echo 'source ~/.golang' >> ~/.bashrc; source ~/.bashrc; /bin/bash ~/.golang
     fi
 fi
 
@@ -90,7 +90,7 @@ if [[ ! $(command -v sdkmanager) ]]; then
     check_export=`cat ~/.android`
     if [[ $check_export != *$ANDROID_HOME* ]]; then
         echo 'export PATH=${PATH}'":${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools" >> ~/.android
-        echo 'source ~/.android'; source ~/.bashrc; /bin/bash ~/.android
+        echo 'source ~/.android' >> ~/.bashrc; source ~/.bashrc; /bin/bash ~/.android
     fi
 fi
 
