@@ -73,8 +73,7 @@ if [[ ! $(command -v go) ]]; then
     wget -q https://dl.google.com/go/${GO_FILE_NAME} && tar -C /usr/local -xzf ${GO_FILE_NAME} && rm -f ${GO_FILE_NAME}*
 
     # update PATH
-    check_export=`cat ~/.golang`
-    if [[ $check_export != *'/usr/local/go/bin'* ]]; then
+    if [ ! -f '~/.golang' ] || [ `cat ~/.golang` != *'/usr/local/go/bin'* ]; then
         echo 'export PATH=${PATH}'":/usr/local/go/bin:/root/go/bin" >> ~/.golang
         echo 'export PATH=${PATH}'":/usr/local/go/bin:/root/go/bin" >> ~/.bashrc
         source ~/.bashrc; /bin/bash ~/.golang
@@ -88,8 +87,7 @@ if [[ ! $(command -v sdkmanager) ]]; then
     wget -q ${DOWNLOAD_URL}/${SDK_FILE_NAME} && unzip ${SDK_FILE_NAME} -d ${ANDROID_HOME} && rm -rf ${SDK_FILE_NAME}*
 
     # update PATH
-    check_export=`cat ~/.android`
-    if [[ $check_export != *$ANDROID_HOME* ]]; then
+    if [ ! -f '~/.android' ] || [ `cat ~/.android` != *$ANDROID_HOME* ]; then
         echo 'export PATH=${PATH}'":${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools" >> ~/.android
         echo 'export PATH=${PATH}'":${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools" >> ~/.bashrc
         source ~/.bashrc; /bin/bash ~/.android
