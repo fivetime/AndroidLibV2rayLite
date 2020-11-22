@@ -74,7 +74,7 @@ if [[ ! $(command -v go) ]]; then
 
     # update PATH
     echo 'export PATH=${PATH}'":/usr/local/go/bin:/root/go/bin" >> ~/.bashrc
-    source ~/.bashrc
+    source ~/.bashrc; /bin/bash ~/.bashrc
 fi
 
 # ------------------------------------------------------
@@ -87,7 +87,7 @@ if [[ ! $(command -v sdkmanager) ]]; then
     check_export=`cat ~/.bashrc`
     if [[ $check_export != *$ANDROID_HOME* ]]; then
         echo 'export PATH=${PATH}'":${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools" >> ~/.bashrc
-        source ~/.bashrc
+        source ~/.bashrc; /bin/bash ~/.bashrc
     fi
 fi
 
