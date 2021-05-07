@@ -14,15 +14,15 @@ import (
 	"AndroidLibV2rayLite/shippedBinarys"
 	mobasset "golang.org/x/mobile/asset"
 
-	v2core "github.com/v2fly/v2ray-core/v4"
-	v2filesystem "github.com/v2fly/v2ray-core/v4/common/platform/filesystem"
-	v2stats "github.com/v2fly/v2ray-core/v4/features/stats"
-	v2serial "github.com/v2fly/v2ray-core/v4/infra/conf/serial"
-	_ "github.com/v2fly/v2ray-core/v4/main/distro/all"
-	v2internet "github.com/v2fly/v2ray-core/v4/transport/internet"
+	v2core "github.com/v2fly/v2ray-core"
+	v2filesystem "github.com/v2fly/v2ray-core/common/platform/filesystem"
+	v2stats "github.com/v2fly/v2ray-core/features/stats"
+	v2serial "github.com/v2fly/v2ray-core/infra/conf/serial"
+	_ "github.com/v2fly/v2ray-core/main/distro/all"
+	v2internet "github.com/v2fly/v2ray-core/transport/internet"
 
-	v2applog "github.com/v2fly/v2ray-core/v4/app/log"
-	v2commlog "github.com/v2fly/v2ray-core/v4/common/log"
+	v2applog "github.com/v2fly/v2ray-core/app/log"
+	v2commlog "github.com/v2fly/v2ray-core/common/log"
 )
 
 const (

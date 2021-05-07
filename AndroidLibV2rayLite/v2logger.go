@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	v2commlog "github.com/v2fly/v2ray-core/v4/common/log"
+	v2commlog "github.com/v2fly/v2ray-core/common/log"
 )
 
 type consoleLogWriter struct {
